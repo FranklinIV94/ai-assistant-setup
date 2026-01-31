@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Own AI Assistant | ALL LINES BUSINESS SOLUTIONS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+        .cta-button {
+            display: inline-block;
+            background: #48bb78;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .cta-button:hover { background: #38a169; }
+        
+        /* Problem */
+        .problem {
+            padding: 60px 20px;
+            background: #f7fafc;
+        }
+        .problem h2 { text-align: center; margin-bottom: 40px; color: #1a365d; }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .problem-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .problem-item h3 { color: #e53e3e; margin-bottom: 10px; }
+        
+        /* Solution */
+        .solution {
+            padding: 60px 20px;
+        }
+        .solution h2 { text-align: center; margin-bottom: 20px; color: #1a365d; }
+        .solution > p { text-align: center; margin-bottom: 40px; color: #666; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .feature h3 { margin-bottom: 10px; }
+        
+        /* How it works */
+        .how-it-works {
+            padding: 60px 20px;
+            background: #1a365d;
+            color: white;
+        }
+        .how-it-works h2 { text-align: center; margin-bottom: 40px; }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #48bb78;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 60px 20px;
+        }
+        .pricing h2 { text-align: center; margin-bottom: 40px; color: #1a365d; }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .price-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+        .price-card.featured {
+            border-color: #48bb78;
+            transform: scale(1.05);
+        }
+        .price-card h3 { margin-bottom: 10px; color: #1a365d; }
+        .price { font-size: 3rem; font-weight: bold; color: #1a365d; }
+        .price span { font-size: 1rem; color: #666; }
+        .price-card ul {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .price-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .price-card li:before {
+            content: "✓ ";
+            color: #48bb78;
+            font-weight: bold;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 60px 20px;
+            background: #f7fafc;
+        }
+        .faq h2 { text-align: center; margin-bottom: 40px; color: #1a365d; }
+        .faq-item {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .faq-item h3 { margin-bottom: 10px; color: #2c5282; }
+        
+        /* CTA */
+        .final-cta {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+            color: white;
+        }
+        .final-cta h2 { margin-bottom: 20px; }
+        .final-cta p { margin-bottom: 30px; opacity: 0.9; }
+        
+        /* Footer */
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            background: #1a202c;
+            color: #a0aec0;
+        }
+        footer a { color: #63b3ed; }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .price-card.featured { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Your Own AI Assistant.<br>Set Up For You.</h1>
+            <p>Everyone's talking about AI assistants. Most people can't install them. We handle the tech so you get the benefits.</p>
+            <a href="#INTAKE_FORM_URL" class="cta-button">Get Started →</a>
+        </div>
+    </section>
+    
+    <section class="problem">
+        <div class="container">
+            <h2>Sound Familiar?</h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h3>😵 "What's an API?"</h3>
+                    <p>You've heard AI can help your business, but the setup guides look like a foreign language.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>⏰ "I don't have time for this"</h3>
+                    <p>You're running a business. You don't have hours to figure out terminal commands.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>😰 "What if I break something?"</h3>
+                    <p>The fear of messing up your computer or wasting money on the wrong tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="solution">
+        <div class="container">
+            <h2>What If Someone Just Did It For You?</h2>
+            <p>That's exactly what we do. You get a working AI assistant without touching a terminal.</p>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">💬</div>
+                    <h3>Chat on WhatsApp</h3>
+                    <p>Or Telegram, Discord, or email. Your AI meets you where you already are.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Actually Useful</h3>
+                    <p>Research, writing, scheduling, reminders, and more. A real assistant, not a gimmick.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Private & Secure</h3>
+                    <p>Runs on your own server. Your data stays yours.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎓</div>
+                    <h3>We Teach You</h3>
+                    <p>Not just setup — we show you how to get the most out of it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Fill Out the Form</h3>
+                    <p>Tell us what you need. Takes 5 minutes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Set Everything Up</h3>
+                    <p>Server, software, connections. Done in 24-48 hours.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Quick Training Call</h3>
+                    <p>We walk you through everything so you're confident.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Start Chatting</h3>
+                    <p>Your AI is ready. Just message it like a coworker.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple Pricing</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Basic</h3>
+                    <div class="price">$99 <span>one-time</span></div>
+                    <ul>
+                        <li>Clawdbot installed & configured</li>
+                        <li>1 messaging platform connected</li>
+                        <li>30-minute orientation call</li>
+                        <li>7 days email support</li>
+                    </ul>
+                    <a href="#INTAKE_FORM_URL" class="cta-button">Get Started</a>
+                </div>
+                <div class="price-card featured">
+                    <h3>Premium ⭐</h3>
+                    <div class="price">$199 <span>one-time</span></div>
+                    <ul>
+                        <li>Everything in Basic</li>
+                        <li>2 messaging platforms</li>
+                        <li>Calendar & email integration</li>
+                        <li>Custom personality setup</li>
+                        <li>60-minute training call</li>
+                        <li>30 days support</li>
+                    </ul>
+                    <a href="#INTAKE_FORM_URL" class="cta-button">Get Started</a>
+                </div>
+                <div class="price-card">
+                    <h3>VIP</h3>
+                    <div class="price">$499 <span>one-time</span></div>
+                    <ul>
+                        <li>Everything in Premium</li>
+                        <li>All platforms connected</li>
+                        <li>Custom skills installed</li>
+                        <li>3 months of check-ins</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#INTAKE_FORM_URL" class="cta-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq">
+        <div class="container">
+            <h2>Questions?</h2>
+            <div class="faq-item">
+                <h3>Do I need any technical skills?</h3>
+                <p>Nope. That's literally why we exist. If you can send a text message, you can use this.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What can the AI actually do?</h3>
+                <p>Research, writing, scheduling, reminders, answering questions, drafting emails, and much more. Think of it as a smart assistant that's always available.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is my data safe?</h3>
+                <p>Yes. Your assistant runs on your own private server, not shared infrastructure. Your conversations stay yours.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What's the ongoing cost?</h3>
+                <p>Server hosting is about $5-10/month (we'll set you up with the cheapest option that works). Plus whatever you spend on AI credits (typically $10-20/month for moderate use).</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Get Your AI Assistant?</h2>
+            <p>Stop watching everyone else use AI. Join them.</p>
+            <a href="#INTAKE_FORM_URL" class="cta-button">Get Started Now →</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p><strong>ALL LINES BUSINESS SOLUTIONS</strong></p>
+            <p>Questions? <a href="mailto:franklin@simplifyingbusinesses.com">franklin@simplifyingbusinesses.com</a> | (561) 479-8624</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">© 2026 All Lines Business Solutions LLC</p>
+        </div>
+    </footer>
+</body>
+</html>
